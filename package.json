@@ -4,17 +4,27 @@
   "description": "An API REST using a express.js",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloJoss/PROYECTO.git"
+  },
   "keywords": [
-    "api",
-    "rest",
+    "node",
     "express",
-    "node.js"
+    "jwt",
+    "mysql"
   ],
   "author": "Pablo Camorlinga, Uri Aguilar, Andrei Garcia",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloJoss/PROYECTO/issues"
+  },
+  "homepage": "https://github.com/PabloJoss/PROYECTO#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   }
 }

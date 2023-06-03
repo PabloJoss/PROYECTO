@@ -1,0 +1,21 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "name": "John",
+        "lastname": "Doe",
+        "phone": "123-456-7890",
+        "email": "johndoe@example.com",
+        "address": "123 Main St"
+      },
+      {
+        "id": 2,
+        "name": "Jane",
+        "lastname": "Smith",
+        "phone": "987-654-3210",
+        "email": "janesmith@example.com",
+        "address": "456 Elm St"
+      }
+    ]
+  }
+  
