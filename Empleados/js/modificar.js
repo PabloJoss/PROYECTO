@@ -4,26 +4,28 @@ function init() {
         window.location.href= "login.html";
     }else{
         document.querySelector('.btn-secondary').addEventListener('click', function(){
-            window.location.href="lobby.html"
+            window.location.href="menu.html"
         });
     
-        document.querySelector('.btn-primary').addEventListener('click', signin);
+        document.querySelector('.btn-primary').addEventListener('click', modificar);
     }
 }
 
-function signin() {
+function modificar() {
 
     var nombre = document.getElementById('input-nombre').value;
+    var nuevo = document.getElementById('input-nuevo').value;
     var apellidos = document.getElementById('input-apellidos').value;
     var telefono = document.getElementById('input-telefono').value;
     var correo = document.getElementById('input-correo').value;
     var direccion = document.getElementById('input-direccion').value;
 
     axios({
-        method: 'post',
-        url: 'http://localhost:3001/employees/signin',
+        method: 'put',
+        url: 'http://localhost:3001/employees/modificar',
         data: {
             nombre: nombre,
+            nuevo: nuevo,
             apellidos: apellidos,
             telefono: telefono,
             correo: correo,
@@ -31,8 +33,8 @@ function signin() {
         }
     }).then(function(res) {
         console.log(res);
-        alert("Registro exitoso");
-        window.location.href = "signin.html";
+        alert("Modificación exitoso");
+        window.location.href = "modificar.html";
     }).catch(function(err) {
         console.log(err);
     })

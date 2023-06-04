@@ -1,40 +1,49 @@
-window.onload= init;
-var headers ={};
-var url ="http://localhost:3001";
+window.onload = init;
+var headers = {};
+var url = "http://localhost:3001";
 
-function init(){
-    if (localStorage.getItem("token")){
-        headers={
-            headers:{
-                'Authorization': "bearer" + localStorage.getItem("token")
+function init() {
+    if(localStorage.getItem("token")){
+        headers = {
+            headers: {
+                'Authorization': "bearer " +localStorage.getItem("token")
             }
-        }
-        loadEmpleado();
+        };
+        document.querySelector('.btn-secondary').addEventListener('click', function(){
+            window.location.href="menu.html";
+        });
 
-    }
-    else {
-        window.location.href="index.html";
+        cargarBase();
+    } else {
+        window.location.href = "login.html";
     }
 }
 
-function loadEmpleado(){
-    axios.get(url + "/employees",headers)
-    .then(function(res){
+function cargarBase() {
+    axios.get(url + "/employees", headers)
+    .then(function(res) {
         console.log(res);
-        displayEmpleado(res.data.message);
-
-    }).catch(function(err){
+        imprimirlos(res.data.message);
+    }).catch(function(err) {
         console.log(err);
-    })
+    });
 }
 
-function displayEmpleado(empleados){
-    console.log("Entro a display pokemon");
-    var body = document.querySelector("body");
-    for (var i = 0; i<empleados.length; i ++){
-        body.innerHTML += `<h3>${empleados[1].nombre}</h3>`;
+function imprimirlos(empleados) {
+    var infoEmpleado = document.getElementById('info-empleado');
+    infoEmpleado.innerHTML = '';
+
+    for(var i = 0; i < empleados.length; i++){
+        var html = '<div>';
+        html += '<ul class="list-group">';
+        html += '<li class="list-group-item">Nombre: ' + empleados[i].nombre + '</li>';
+        html += '<li class="list-group-item">Apellidos: ' + empleados[i].apellidos + '</li>';
+        html += '<li class="list-group-item">Telefono: ' + empleados[i].telefono + '</li>';
+        html += '<li class="list-group-item">Correo: ' + empleados[i].correo + '</li>';
+        html += '<li class="list-group-item">Direccion: ' + empleados[i].direccion + '</li>';
+        html += '</ul>';
+        html += '</div>';
+
+        infoEmpleado.innerHTML += html;
     }
-
 }
-
-
