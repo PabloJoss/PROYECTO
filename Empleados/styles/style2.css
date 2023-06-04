@@ -17,7 +17,7 @@
   }
   
   body {
-    background: hsl(204 100% 5%);
+    background: hsl(0, 0%, 0%);
     
     min-block-size: 100%;
     min-inline-size: 100%;
@@ -46,7 +46,7 @@
 
 
   .form-control {
-    background-color: #212121;
+    background-color: #000000;
     max-width: 200px;
     height: 20px;
     padding: 10px;
@@ -56,10 +56,10 @@
   }
   
   .form-control:focus {
-    color: rgb(0, 255, 255);
-    background-color: #212121;
-    outline-color: rgb(0, 255, 255);
-    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    color: rgb(0, 0, 0);
+    background-color: #000000;
+    outline-color: rgb(0, 0, 0);
+    box-shadow: -3px -3px 15px rgb(0, 0, 0);
     transition: .1s;
     transition-property: box-shadow;
   }

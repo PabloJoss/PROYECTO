@@ -1,15 +1,21 @@
 
-
 article {
-    background: linear-gradient(
-      to right, 
-      hsl(98 100% 62%), 
-      hsl(0, 0%, 100%)
-    );
+    background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    padding-bottom: 20px; /* Ajusta este valor según sea necesario */
   }
+  
+  .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajusta este valor según sea necesario */
+    margin-bottom: 0; /* Agrega esta línea para eliminar el margen inferior */
+  }
+  
+
   
   h1 {
     font-size: 60px;
@@ -17,7 +23,7 @@ article {
   }
   
   body {
-    background: hsl(204 100% 5%);
+    background: hsl(0, 0%, 0%);
     
     min-block-size: 100%;
     min-inline-size: 100%;
@@ -43,6 +49,8 @@ article {
   
   
    /*  BOTONES */
+  
+  
    button {
     --green: #1BFD9C;
     font-size: 15px;
@@ -79,3 +87,6 @@ button:before {
 button:hover:before {
     transform: translateX(15em);
 }
+
+
+  

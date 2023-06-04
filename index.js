@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 //Routes
-const empleados = require('./routes/employees');
+const employees = require('./routes/employees');
 const user = require('./routes/user');
 
 
@@ -25,7 +25,7 @@ app.get("/", index);
 
 app.use("/user", user);
 
-app.use("/employees", empleados);
+app.use("/employees", employees);
 
 app.use(auth);
 

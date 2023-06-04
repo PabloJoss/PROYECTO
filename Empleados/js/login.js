@@ -4,7 +4,7 @@ function init() {
     if (!localStorage.getItem("token")){
         document.querySelector('.btn-primary').addEventListener('click', login);
     }else{
-        window.location.href= "lobby.html";
+        window.location.href= "menu.html";
     }
 }
 
