@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto</title>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>   
+    <script src="./js/buscar.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <h1>Buscar Empleado</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-6 offset-3">
+                <div class="form-group">
+                    <label for="input-nombre">Nombre del empleado</label>
+                    <input type="text" class="form-control" id="input-nombre" placeholder="Nombre del empleado">
+                </div>
+                <br>
+                <div class="d-flex justify-content-between">
+                    <table><tr><td>
+                    <button class="btn btn-primary">Buscar</button>
+                    <button class="btn btn-secondary">Regresar al menu</button>
+                </td></tr></table>
+                </div>
+                <div id="info-empleado"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
