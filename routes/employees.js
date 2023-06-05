@@ -49,9 +49,9 @@ employees.delete("/eliminar", async (req, res, next) => {
     const rows = await db.query(query);
 
     if(rows.affectedRows == 1){
-        return res.status(200).json({code: 200, message: "Usuario borrado correctamente"});
+        return res.status(200).json({code: 200, message: "Empleado borrado correctamente"});
     }else{
-    return res.status(404).json({code:404,message:"Usuario no encontrado"});
+    return res.status(404).json({code:404,message:"Empleado no encontrado"});
     }
 
 });
