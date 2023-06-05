@@ -34,6 +34,8 @@
   
   p {
     font-family: "Dank Mono", ui-monospace, monospace;
+    color: #ffffff; 
+
   }
   
   html {
@@ -53,13 +55,15 @@
     border: 2px solid white;
     border-radius: 5px;
     color: #fff;
+    
+
   }
   
   .form-control:focus {
     color: rgb(0, 0, 0);
-    background-color: #000000;
-    outline-color: rgb(0, 0, 0);
-    box-shadow: -3px -3px 15px rgb(0, 0, 0);
+    background-color: #ffffff;
+    outline-color: rgb(255, 255, 255);
+    box-shadow: -3px -3px 15px rgb(255, 255, 255);
     transition: .1s;
     transition-property: box-shadow;
   }
